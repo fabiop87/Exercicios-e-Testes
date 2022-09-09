@@ -1,0 +1,24 @@
+Adicao: push, unshift
+
+	push -> add no final do array
+	unshift -> add no comeco do array
+
+remocao: pop, shift, splice
+	shift -> remove o primeiro valor do array
+	pop-> remove o ultimo valor do array
+	splice-> remove os indices passados. Exemplo: (1,3) = do 1 até o 3
+
+concatenacao: concat
+	junta os 2 arrays
+
+
+//Metodo Map:
+array = [1,2,3,4,5]
+function multiplicarPor10(n){
+	return n*10;
+}
+let array2 =  array.map(multiplicarPor10);
+
+
+//Metodo Filter
+deixa o array com a condicao da funcao passada
