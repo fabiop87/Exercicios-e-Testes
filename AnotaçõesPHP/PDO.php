@@ -1,8 +1,15 @@
 <?php 
 
+require_once '../Config.php';
 // Conexao
 
-$pdo =  new PDO("mysql:host=localhost;dbname=teste;charset=utf8","$user", "$senha");
+$pdo =  new PDO(
+  "mysql:host=" . MYSQL_HOST . ";" . 
+  "dbname=" . MYSQL_DATABASE . ";charset=utf8",
+  MYSQL_USER,
+  MYSQL_PASS
+);
+
 $dados = $pdo->query("SELECT * FROM clientes");
 $clientes = $dados->fetchAll(PDO::FETCH_ASSOC);
 
