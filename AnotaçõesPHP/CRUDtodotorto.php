@@ -14,7 +14,7 @@ $pdo =  new PDO(
 
 //Select
 $clientes = $pdo->query("SELECT * FROM clientes")->fetchAll(PDO::FETCH_ASSOC);
-echo <pre>;
+echo '<pre>';
 print_r($clientes);
 
 //Insert
