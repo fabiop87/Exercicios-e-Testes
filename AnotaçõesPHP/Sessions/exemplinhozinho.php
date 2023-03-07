@@ -46,4 +46,25 @@ print_r($_SESSION);
 //limpar os dados da sessao
 session_unset();
 
+/*
+
+Deslogar
+
+Dentro do html
+<a href="?logout=1">Sair</a>
+
+No php
+session_start();
+if(isset($_GET['logout']) && $_GET['logout'] == 1){
+  session_unset();
+  session_destroy();
+
+}
+
+
+*/
+
+
+
+
 ?>
