@@ -1,0 +1,95 @@
+MongoDB.  Collections - Documentos
+
+ Apagar-> db.collection.remove()
+ Datas-> ISODate("2023-03-16 20:26:30");
+
+  Data atual: Date();
+
+timestamp _id : db.collection.findOne()._id.getTimestamp()
+
+No banco não relacional o ideal é ter todas as informações que precisa no mesmo documento (para não depender de join)
+ Update:
+db.collection.updateOne({id:1}, {$set: { "nome": "josney" }})
+ Replace:
+
+db.collection.replaceOne(
+{id:1}, {"nome": "banana"})
+,Não tem o $set
+
+ Delete:
+db.collection.deleteOne({idade:40})
+ou deleteMany
+
+
+Outro exemplo de filtragem:
+db.pilotos.find({idPiloto:{$ne:4}}, {pais:0})
+
+0 -> não mostrar
+1 -> mostrar
+
+db.pilotos.find({idPiloto:{$ne:4}}, {NomePiloto:1, _id:0})
+
+db.equipes.find({},{"pilotos.piloto1":1})
+ Exemplo operador in:
+db.pessoas.find({idade:{ $in: [25, 55]}})
+ Exemplo com operador and:
+db.pessoas.find( {$and: [{idade:{$lt:25}}, {cidade: "dsadad"}]})
+ Operadores comparação:
+
+$eq: =
+$lt: <
+$gt: >
+$lte: <=
+$gte: >=
+$ne: <>
+$exists: true/false
+$and: e
+$or: ou
+$in: igual no sql
+$nin: not in
+$not: negação (inverte)
+Exemplo: db.pessoas.find({idade:{$ne:29}})
+
+ $nor: inverte tudo ( precisa de [ ] em volta dos parâmetros)
+
+
+Mais exemplos: 
+
+db.pessoas.find({_id:7}, {_id:0, nome:1, celular:1})
+
+db.alunos.find({id:3}, {materias:1})
+
+db.alunos.find({id:3}, {"materias.matematica": 1})
+
+=
+db.alunos.find({id:{$eq:5}})
+
+>
+db.alunos.find({idade:{$gt:5}}, {idade:1})
+
+sem filtro
+db.alunos.find({idade:{}, {idade:1})
+
+<
+db.alunos.find({idade:{$lt:20}}, {idade:1})
+
+in
+db.alunos.find({idade:{$in:[23,25]}}, {idade:1})
+
+not in
+db.alunos.find({idade:{$nin:[23,25]}}, {idade:1})
+
+diferente
+db.alunos.find({idade:{$ne:24}}, {idade:1})
+
+and
+db.alunos.find({$and:[{idade:23}, {cidade:"sp"}], {idade:1, cidade:1})
+
+or
+db.alunos.find({$or:[{idade:23}, {cidade:"sp"}], {idade:1, cidade:1})
+
+not
+db.alunos.find({$or:[{idade:{$not:{$gt:30}}}, {cidade:"sp"}], {idade:1, cidade:1})
+
+nor
+db.alunos.find({$nor:[{$and:[ {idade:23}, {cidade:"sp"}]}]}, {idade:1, cidade:1})
