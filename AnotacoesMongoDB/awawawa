@@ -93,3 +93,43 @@ db.alunos.find({$or:[{idade:{$not:{$gt:30}}}, {cidade:"sp"}], {idade:1, cidade:1
 
 nor
 db.alunos.find({$nor:[{$and:[ {idade:23}, {cidade:"sp"}]}]}, {idade:1, cidade:1})
+
+db.pilotos.insertOne(
+{
+"id": 1,
+"nome": "Fernando Alonso",
+"paisDeOrigem": "Espanha",
+"circuitoPreferido": {
+"idCircuito": 1,
+"nome": "Donington Park"
+},
+"qtdeprovas": 5,
+"qtdevitorias": 1,
+"equipe": {
+"nome": "Aston Martin",
+"paisDaEquipe": [
+"Estados Unidos",
+],
+"Inglaterra"
+"circuitoDaEquipe": {
+"idcircuito": 2,
+"nome": "Indianapolis"
+}}})
+
+db.circuitos.insertMany([
+"id": 1,
+"nome": "Donington Park",
+"pais": "Inglaterra",
+"extensao": 4.02
+},
+{
+"id": 2,
+"nome": "Indianapolis",
+"pais": "Estados Unidos",
+"extensao": 4.182
+}
+db.cicuitos. insertOne({
+"id": 3,
+"nome": "Interlagos",
+"pais": "Brasil",
+extensão: 4.309
