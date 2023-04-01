@@ -116,7 +116,7 @@ function validateCPF(cpf) {
 }
 function validateEmail(email) {
     // Implementação da validação do e-mail
-    // Aqui você pode usar uma expressão regular ou uma biblioteca externa
+
 
     // Exemplo de validação simples:
     if (email.indexOf('@') == -1 || email.indexOf('.') == -1) {
