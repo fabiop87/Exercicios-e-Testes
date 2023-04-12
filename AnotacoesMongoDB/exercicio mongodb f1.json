@@ -1,0 +1,459 @@
+## Fabio Pilon 0391/22-1
+
+use formula1
+
+db.pilotos.insertMany([
+    {
+        "id": 1,
+        "nome": "Fernando Alonso",
+        "paisDeOrigem": "Espanha",
+        "circuitoPreferido": {
+            "idCircuito": 1,
+            "nome": "Donington Park"
+        },
+        "qtdeProvas": 5,
+        "qtdeVitorias": 1,
+        "equipe": {
+            "nome": "Aston Martin",
+            "paisDaEquipe": [
+                "Estados Unidos",
+                "Inglaterra"
+            ],
+            "circuitoDaEquipe": {
+                "idCircuito": 2,
+                "nome": "Indianapolis"
+            }
+        }
+    },
+    {
+        "id": 2,
+        "nome": "Max Verstappen",
+        "paisDeOrigem": "Holanda",
+        "circuitoPreferido": {
+            "idCircuito": 11,
+            "nome": "Circuito de Rua de Adelaide"
+        },
+        "qtdeProvas": 6,
+        "qtdeVitorias": 2,
+        "equipe": {
+            "nome": "Red Bull Racing",
+            "paisDaEquipe": [
+                "Holanda",
+                "Mexico"
+            ],
+            "circuitoDaEquipe": {
+                "idCircuito": 8,
+                "nome": "Circuito de Barcelona-Catalunha"
+            }
+        }
+    },
+    {
+        "id": 3,
+        "nome": "Sergio Perez",
+        "paisDeOrigem": "Mexico",
+        "circuitoPreferido": {
+            "idCircuito": 6,
+            "nome": "Circuito das Américas"
+        },
+        "qtdeProvas": 4,
+        "qtdeVitorias": 1,
+        "equipe": {
+            "nome": "Red Bull Racing",
+            "paisDaEquipe": [
+                "Holanda",
+                "Mexico"
+            ],
+            "circuitoDaEquipe": {
+                "idCircuito": 8,
+                "nome": "Circuito de Barcelona-Catalunha"
+            }
+        }
+    },
+    {
+        "id": 4,
+        "nome": "Lando Norris",
+        "paisDeOrigem": "Inglaterra",
+        "circuitoPreferido": {
+            "idCircuito": 4,
+            "nome": "Circuito de Aintree"
+        },
+        "qtdeProvas": 2,
+        "qtdeVitorias": 0,
+        "equipe": {
+            "nome": "McLaren",
+            "paisDaEquipe": [
+                "Inglaterra",
+                "Australia"
+            ],
+            "circuitoDaEquipe": {
+                "idCircuito": 9,
+                "nome": "Circuito Bugatti"
+            }
+        }
+    },
+    {
+        "id": 5,
+        "nome": "Oscar Piastri",
+        "paisDeOrigem": "Australia",
+        "circuitoPreferido": {
+            "idCircuito": 5,
+            "nome": "Autódromo Internacional do Algarve"
+        },
+        "qtdeProvas": 4,
+        "qtdeVitorias": 0,
+        "equipe": {
+            "nome": "McLaren",
+            "paisDaEquipe": [
+                "Inglaterra",
+                "Australia"
+            ],
+            "circuitoDaEquipe": {
+                "idCircuito": 9,
+                "nome": "Circuito Bugatti"
+            }
+        }
+    },
+    {
+        "id": 6,
+        "nome": "Yuki Tsunoda",
+        "paisDeOrigem": "Japao",
+        "circuitoPreferido": {
+            "idCircuito": 7,
+            "nome": "Circuito Internacional do Bahrein"
+        },
+        "qtdeProvas": 5,
+        "qtdeVitorias": 0,
+        "equipe": {
+            "nome": "AlphaTauri",
+            "paisDaEquipe": [
+                "Japao",
+                "Holanda"
+            ],
+            "circuitoDaEquipe": {
+                "idCircuito": 3,
+                "nome": "Interlagos"
+            }
+        }
+    },
+    {
+        "id": 7,
+        "nome": "Nyck de Vries",
+        "paisDeOrigem": "Holanda",
+        "circuitoPreferido": {
+            "idCircuito": 1,
+            "nome": "Donington Park"
+        },
+        "qtdeProvas": 7,
+        "qtdeVitorias": 2,
+        "equipe": {
+            "nome": "AlphaTauri",
+            "paisDaEquipe": [
+                "Japao",
+                "Holanda"
+            ],
+            "circuitoDaEquipe": {
+                "idCircuito": 3,
+                "nome": "Interlagos"
+            }
+        }
+    },
+    {
+        "id": 8,
+        "nome": "Nico Hulkenberg",
+        "paisDeOrigem": "Alemanha",
+        "circuitoPreferido": {
+            "idCircuito": 4,
+            "nome": "Circuito de Aintree"
+        },
+        "qtdeProvas": 3,
+        "qtdeVitorias": 1,
+        "equipe": {
+            "nome": "Haas F1 Team",
+            "paisDaEquipe": [
+                "Alemanha",
+                "Dinamarca"
+            ],
+            "circuitoDaEquipe": {
+                "idCircuito": 6,
+                "nome": "Circuito das Américas"
+            }
+        }
+    },
+    {
+        "id": 9,
+        "nome": "Kevin Magnussen",
+        "paisDeOrigem": "Dinamarca",
+        "circuitoPreferido": {
+            "idCircuito": 8,
+            "nome": "Circuito de Barcelona-Catalunha"
+        },
+        "qtdeProvas": 5,
+        "qtdeVitorias": 0,
+        "equipe": {
+            "nome": "Haas F1 Team",
+            "paisDaEquipe": [
+                "Alemanha",
+                "Dinamarca"
+            ],
+            "circuitoDaEquipe": {
+                "idCircuito": 6,
+                "nome": "Circuito das Américas"
+            }
+        }
+    },
+    {
+        "id": 10,
+        "nome": "Valtteri Bottas",
+        "paisDeOrigem": "Finlandia",
+        "circuitoPreferido": {
+            "idCircuito": 3,
+            "nome": "Interlagos"
+        },
+        "qtdeProvas": 8,
+        "qtdeVitorias": 4,
+        "equipe": {
+            "nome": "Alfa Romeo",
+            "paisDaEquipe": [
+                "Finlandia",
+                "China"
+            ],
+            "circuitoDaEquipe": {
+                "idCircuito": 7,
+                "nome": "Circuito Internacional do Bahrein"
+            }
+        }
+    },
+    {
+        "id": 11,
+        "nome": "Guan Yu Zhou",
+        "paisDeOrigem": "China",
+        "circuitoPreferido": {
+            "idCircuito": 4,
+            "nome": "Circuito de Aintree"
+        },
+        "qtdeProvas": 5,
+        "qtdeVitorias": 2,
+        "equipe": {
+            "nome": "Alfa Romeo",
+            "paisDaEquipe": [
+                "Finlandia",
+                "China"
+            ],
+            "circuitoDaEquipe": {
+                "idCircuito": 7,
+                "nome": "Circuito Internacional do Bahrein"
+            }
+        }
+    },
+    {
+        "id": 12,
+        "nome": "Carlos Sainz Jr.",
+        "paisDeOrigem": "Espanha",
+        "circuitoPreferido": {
+            "idCircuito": 3,
+            "nome": "Interlagos"
+        },
+        "qtdeProvas": 6,
+        "qtdeVitorias": 0,
+        "equipe": {
+            "nome": "Ferrari",
+            "paisDaEquipe": [
+                "Espanha",
+                "Monaco"
+            ],
+            "circuitoDaEquipe": {
+                "idCircuito": 11,
+                "nome": "Circuito de Rua de Adelaide"
+            }
+        }
+    },
+    {
+        "id": 13,
+        "nome": "Charles Leclerc",
+        "paisDeOrigem": "Monaco",
+        "circuitoPreferido": {
+            "idCircuito": 5,
+            "nome": "Autódromo Internacional do Algarve"
+        },
+        "qtdeProvas": 2,
+        "qtdeVitorias": 0,
+        "equipe": {
+            "nome": "Ferrari",
+            "paisDaEquipe": [
+                "Espanha",
+                "Monaco"
+            ],
+            "circuitoDaEquipe": {
+                "idCircuito": 11,
+                "nome": "Circuito de Rua de Adelaide"
+            }
+        }
+    },
+    {
+        "id": 14,
+        "nome": "Pierre Gasly",
+        "paisDeOrigem": "França",
+        "circuitoPreferido": {
+            "idCircuito": 3,
+            "nome": "Interlagos"
+        },
+        "qtdeProvas": 4,
+        "qtdeVitorias": 1,
+        "equipe": {
+            "nome": "Alpine",
+            "paisDaEquipe": [
+                "França",
+                "França"
+            ],
+            "circuitoDaEquipe": {
+                "idCircuito": 5,
+                "nome": "Autódromo Internacional do Algarve"
+            }
+        }
+    },
+    {
+        "id": 15,
+        "nome": "Esteban Ocon",
+        "paisDeOrigem": "França",
+        "circuitoPreferido": {
+            "idCircuito": 10,
+            "nome": "Circuito Internacional da Coreia"
+        },
+        "qtdeProvas": 5,
+        "qtdeVitorias": 1,
+        "equipe": {
+            "nome": "Alpine",
+            "paisDaEquipe": [
+                "França",
+                "França"
+            ],
+            "circuitoDaEquipe": {
+                "idCircuito": 5,
+                "nome": "Autódromo Internacional do Algarve"
+            }
+        }
+    }
+]    )
+ 
+
+db.circuitos.insertMany([
+    {
+        "id": 1,
+        "nome": "Donington Park",
+        "pais": "Inglaterra",
+        "extensao": 4.02
+    },
+    {
+        "id": 2,
+        "nome": "Indianapolis",
+        "pais": "Estados Unidos",
+        "extensao": 4.182
+    },
+    {
+        "id": 11,
+        "nome": "Circuito de Rua de Adelaide",
+        "pais": "Australia",
+        "extensao": 3.78
+    },
+    {
+        "id": 4,
+        "nome": "Circuito de Aintree",
+        "pais": "Inglaterra",
+        "extensao": 4.82
+    },
+    {
+        "id": 5,
+        "nome": "Autódromo Internacional do Algarve",
+        "pais": "Portugal",
+        "extensao": 4.62
+    },
+    {
+        "id": 6,
+        "nome": "Circuito das Américas",
+        "pais": "Estados Unidos",
+        "extensao": 5.51
+    },
+    {
+        "id": 7,
+        "nome": "Circuito Internacional do Bahrein",
+        "pais": "Bahrein",
+        "extensao": 3.66
+    },
+    {
+        "id": 8,
+        "nome": "Circuito de Barcelona-Catalunha",
+        "pais": "Espanha",
+        "extensao": 4.65
+    },
+    {
+        "id": 9,
+        "nome": "Circuito Bugatti",
+        "pais": "França",
+        "extensao": 4.43
+    },
+    {
+        "id": 10,
+        "nome": "Circuito Internacional da Coreia",
+        "pais": "Coreia do Sul",
+        "extensao": 5.61
+    }
+]
+)
+
+db.cicuitos.insertOne({
+    "id": 3,
+    "nome": "Interlagos",
+    "pais": "Brasil",
+    "extensao": 4.309
+})
+
+db.pilotos.insertOne({
+    "id": 16,
+    "nome": "Lewis Hamilton",
+    "paisDeOrigem": "Inglaterra",
+    "circuitoPreferido": {
+        "idCircuito": 3,
+        "nome": "Interlagos"
+    },
+    "qtdeProvas": 7,
+    "qtdeVitorias": 4,
+    "equipe": {
+        "nome": "Mercedes",
+        "paisDaEquipe": [
+            "Inglaterra",
+            "Estados Unidos"
+        ],
+        "circuitoDaEquipe": {
+            "idCircuito": 3,
+            "nome": "Interlagos"
+        }
+    }
+})
+
+
+Altere a quantidade de provas de um piloto, filtrando pelo id
+db.pilotos.updateOne({ "id": 5 },
+{
+  $set: {
+    "qtdeProvas": 6,
+  }
+})
+
+Liste todos os pilotos tem tem como circuito preferido a pista de Interlagos
+db.pilotos.find({"circuitoPreferido.nome": "Interlagos"})
+
+Liste todos os circuitos cadastrados, exibindo apenas os campos nome, pais e extensao
+db.circuitos.find({}, {
+    "nome":1, "pais:1":1, "extensao":1 
+  })
+Liste todos os pilotos com mais de 3 vitorias
+db.pilotos.find({"qtdeVitorias": {$gt:3}})
+
+Liste os pilotos que não tem vitorias
+
+db.pilotos.find({"qtdeVitorias": 0})
+
+Liste apenas o nome e pais de origem dos pilotos da equipe mercedes
+db.pilotos.find({"equipe.nome": "Mercedes"})
+Altere o circuito da ferrari para o circuito de Monza, lembre-se de acertar o id do circuito tambem
+db.pilotos.updateMany({"equipe.nome": "Ferrari"}, {$set: { "equipe.circuitoDaEquipe.id": 12, "equipe.circuitodaEquipe.nome" : "Circuito de Monza"}})
