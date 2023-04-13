@@ -400,7 +400,7 @@ db.circuitos.insertMany([
 ]
 )
 
-db.cicuitos.insertOne({
+db.circuitos.insertOne({
     "id": 3,
     "nome": "Interlagos",
     "pais": "Brasil",
