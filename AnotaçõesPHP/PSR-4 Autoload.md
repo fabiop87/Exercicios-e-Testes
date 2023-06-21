@@ -12,8 +12,7 @@ class User
         echo 'fodase';
     }
 }
-</code>
-<code>
+////
 <?php
 require '../vendor/autoload.php';
 
