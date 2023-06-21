@@ -1,7 +1,7 @@
 - bash: composer init
 generate autoload 
 
-<code>
+
 <?php
 
 namespace Fabio\ExemploAutoload\app;
@@ -23,4 +23,4 @@ $user = new User();
 $user->fodase();
 
 ?>
-</code>
+
